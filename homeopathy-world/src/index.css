@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-neutral-800 bg-neutral-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-semibold text-neutral-900;
+  }
+}
+
+@layer components {
+  /* Container */
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-primary-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25 hover:scale-105 active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-primary-500 text-primary-600 hover:bg-primary-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:border-primary-600;
+  }
+  
+  .btn-success {
+    @apply bg-gradient-to-r from-secondary-500 to-secondary-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-secondary-500/25 hover:scale-105;
+  }
+  
+  /* Sections */
+  .section {
+    @apply py-12 md:py-16;
+  }
+  
+  .section-lg {
+    @apply py-16 md:py-20;
+  }
+  
+  /* Cards - Using Tailwind's built-in shadows */
+  .card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-neutral-100;
+  }
+  
+  .card-medical {
+    @apply bg-gradient-to-br from-primary-50 to-white border-primary-100;
+  }
+  
+  .card-success {
+    @apply bg-gradient-to-br from-secondary-50 to-white border-secondary-100;
+  }
+  
+  /* Inputs */
+  .input-field {
+    @apply w-full border border-neutral-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary-400 focus:border-primary-400 focus:outline-none transition text-neutral-700 placeholder-neutral-400;
+  }
+  
+  /* Text */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-secondary {
+    @apply bg-gradient-to-r from-secondary-500 to-secondary-600 bg-clip-text text-transparent;
+  }
+  
+  /* Badges */
+  .badge-primary {
+    @apply bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .badge-success {
+    @apply bg-secondary-100 text-secondary-700 px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .badge-accent {
+    @apply bg-accent-100 text-accent-700 px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  /* Stats */
+  .stat-card {
+    @apply bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow;
+  }
+  
+  /* Testimonial Cards */
+  .testimonial-card {
+    @apply bg-gradient-to-br from-white to-neutral-50 rounded-xl p-6 shadow-lg border border-neutral-100;
+  }
+}
+
+@layer utilities {
+  /* Animation delays */
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+  .animate-delay-600 { animation-delay: 600ms; }
+  .animate-delay-700 { animation-delay: 700ms; }
+  .animate-delay-800 { animation-delay: 800ms; }
+  .animate-delay-900 { animation-delay: 900ms; }
+  .animate-delay-1000 { animation-delay: 1000ms; }
+  .animate-delay-1500 { animation-delay: 1500ms; }
+  .animate-delay-2000 { animation-delay: 2000ms; }
+  
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  /* Custom animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Gradient backgrounds */
+  .bg-gradient-medical {
+    @apply bg-gradient-to-r from-primary-500 to-primary-700;
+  }
+  
+  .bg-gradient-nature {
+    @apply bg-gradient-to-r from-secondary-500 to-secondary-700;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #0ea5e9, #0284c7);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #0284c7, #0369a1);
+}
+
+/* Selection color */
+::selection {
+  background-color: #bae6fd;
+  color: #171717;
+}
+
+/* Focus styles */
+*:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: #7dd3fc;
+}
+
+.input {
+  @apply w-full 
+         px-4 py-3
+         border border-gray-300
+         rounded-xl
+         text-sm
+         outline-none
+         transition
+         focus:border-cyan-500
+         focus:ring-2
+         focus:ring-cyan-200;
+}

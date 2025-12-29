@@ -1,10 +1,10 @@
 
 
-
+import Image from "../../Images/Homeopathy/Homeopathymedicine-2.webp"
 const Why = () => {
 return (
-<section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+<section className="py-10 bg-gray-50">
+        <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-80 items-center ">
           
           <div>
             <span className="text-cyan-600 uppercase text-sm">

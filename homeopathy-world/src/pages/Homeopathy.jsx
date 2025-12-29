@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "../Images/Homeopathy/Homeopathymedicine-2.webp"
 import Hero from "../components/Background";
 import Intro from "./Homeopathy/Intro";
 import About from "./Homeopathy/AboutHomeopathy";
@@ -21,7 +20,6 @@ const Homeopathy = () => {
 
       {/* ================= CONDITIONS ================= */}
      < Conditions />
-
       {/* ================= STATS ================= */}
       < Stat />
 

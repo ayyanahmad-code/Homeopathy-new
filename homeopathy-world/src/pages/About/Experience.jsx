@@ -3,7 +3,7 @@ import React from 'react'
 const Experience = () => {
   return (
     <div>
-      <section className="py-16 bg-white text-center">
+      <section className="py-4 bg-white text-center">
         <h2 className="text-5xl font-bold text-blue-900 mb-2">18+</h2>
         <p className="text-lg font-semibold text-gray-700">
           Years of Experience
